@@ -40,7 +40,7 @@ func getToDo(context *gin.Context) {
 	id := context.Param("id")
 	toDo, err := getToDoById(id)
 	if err != nil {
-		context.IndentedJSON(http.StatusNotFound, gin.H{"messag": "to do not found"})
+		context.IndentedJSON(http.StatusNotFound, gin.H{"message": "to do not found"})
 		return
 	}
 
